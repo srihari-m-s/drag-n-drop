@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/index.js" defer></script>
+
+    <title>Drag-n-Drop</title>
+</head>
+<body>
+    <div class="container-main">
+
+        <div class="container-one" id="source" aria-label="Drag from this container">
+        
+            <h3 class="draggable-item" id="one" draggable="true" ondragstart="handleDragstart(event)" ondragend="handleDragend(event)">One</h3>
+            <h3 class="draggable-item" id="two" draggable="true" ondragstart="handleDragstart(event)" ondragend="handleDragend(event)">Two</h3>
+            <h3 class="draggable-item" id="three" draggable="true" ondragstart="handleDragstart(event)" ondragend="handleDragend(event)">Three</h3>
+            <h3 class="draggable-item" id="four" draggable="true" ondragstart="handleDragstart(event)" ondragend="handleDragend(event)">Four</h3>
+            
+        </div>
+    
+    
+        <div class="container-two" id="target" ondragover="handleDragover(event)" ondrop="handleDrop(event)" aria-label="Drop in this container">
+            
+        </div>
+
+        <button class="reset" id="reset" onclick="handleReset()" aria-label="Reset button">Reset</button>
+
+    </div>
+
+</body>
+</html>
